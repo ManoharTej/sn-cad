@@ -1,0 +1,24 @@
+graph TD
+    subgraph Client [Client Side (React Native / Expo)]
+        UI[User Interface]
+        Routing[Expo Router]
+        Zustand[Zustand Store]
+    end
+
+    subgraph Data [Data Persistence]
+        AsyncStorage[(React Native AsyncStorage)]
+        JSONDataset[(questions.json Dataset)]
+    end
+
+    User((User)) --> UI
+    UI <--> Routing
+    UI <--> Zustand
+    
+    Zustand -->|Loads| JSONDataset
+    Zustand <-->|Saves/Hydrates| AsyncStorage
+    
+    %% Styles
+    classDef client fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef data fill:#bbf,stroke:#333,stroke-width:2px;
+    class Client client;
+    class Data data;
