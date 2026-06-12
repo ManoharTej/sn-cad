@@ -1,13 +1,13 @@
 graph TD
-    subgraph Client [Client Side (React Native / Expo)]
-        UI[User Interface]
-        Routing[Expo Router]
-        Zustand[Zustand Store]
+    subgraph Client ["Client Side (React Native / Expo)"]
+        UI["User Interface"]
+        Routing["Expo Router"]
+        Zustand["Zustand Store"]
     end
 
-    subgraph Data [Data Persistence]
-        AsyncStorage[(React Native AsyncStorage)]
-        JSONDataset[(questions.json Dataset)]
+    subgraph Data ["Data Persistence"]
+        AsyncStorage[("React Native AsyncStorage")]
+        JSONDataset[("questions.json Dataset")]
     end
 
     User((User)) --> UI
