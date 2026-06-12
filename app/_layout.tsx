@@ -5,6 +5,8 @@ import { useEffect } from 'react';
 import 'react-native-reanimated';
 
 import { useColorScheme } from '@/components/useColorScheme';
+import { useQuizStore } from '@/store/useQuizStore';
+import questionsData from '@/assets/data/questions.json';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -44,6 +46,12 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
+  const loadQuestions = useQuizStore(state => state.loadQuestions);
+
+  useEffect(() => {
+    // @ts-ignore
+    loadQuestions(questionsData);
+  }, []);
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
