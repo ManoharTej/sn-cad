@@ -11,6 +11,21 @@ The CAD Smart Prep Engine moves beyond static PDFs, providing a dynamic, offline
 
 ---
 
+## 📸 App Previews
+
+<div align="center">
+  <img src="./docs/assets/demo.webp" width="250" alt="App Demo Walkthrough" />
+</div>
+
+<p align="center">
+  <img src="./screenshots/dashboard.png" width="200" alt="Dashboard" />
+  <img src="./screenshots/modules.png" width="200" alt="Module Practice" />
+  <img src="./screenshots/flashcards.png" width="200" alt="Flashcards" />
+  <img src="./screenshots/mock_exam.png" width="200" alt="Mock Exam" />
+</p>
+
+---
+
 ## 🎯 Features
 
 - **📊 Dynamic Progress Dashboard:** Real-time tracking of your total attempts and overall accuracy.
